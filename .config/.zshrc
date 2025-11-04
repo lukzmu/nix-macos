@@ -14,8 +14,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Aliasing
-alias notes='cd ~/developer/projects/notes/ && nvim .'
-alias journal='cd ~/developer/projects/journal/'
+alias notes='cd ~/developer/projects/lukzmu/notes/ && nvim .'
+alias journal='cd ~/developer/projects/lukzmu/journal/'
 alias lg='lazygit'
 alias img='wezterm imgcat $@'
 
