@@ -1,0 +1,22 @@
+# Finder metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files
+Icon?
+._*
+
+# Spotlight indexing
+.metadata_never_index
+.Trashes
+.VolumeIcon.icns
+
+# Quick Look thumbnails
+._*
+*.qlcache
+*.qlo
+
+# System files
+.Spotlight-V100
+.fseventsd
