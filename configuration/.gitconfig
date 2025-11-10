@@ -60,11 +60,11 @@
 
 # --- Directory Configuration ---
 
-[includeIf "gitdir:~/Developer/projects/lukzmu/**"]
+[includeIf "gitdir:~/developer/projects/lukzmu"]
     path = .gitconfig-personal
 
-[includeIf "gitdir:~/Developer/projects/stx/**"]
+[includeIf "gitdir:~/developer/projects/stx"]
     path = .gitconfig-stx
 
-[includeIf "gitdir:~/Developer/projects/c9h/**"]
+[includeIf "gitdir:~/developer/projects/c9h"]
     path = .gitconfig-c9h

@@ -38,6 +38,7 @@ Plug('mason-org/mason-lspconfig.nvim')
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('catppuccin/nvim', {['as'] = 'catppuccin' })
+Plug('MeanderingProgrammer/render-markdown.nvim')
 vim.call('plug#end')
 
 -- Theme --
