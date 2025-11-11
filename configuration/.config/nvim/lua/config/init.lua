@@ -16,8 +16,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Common Settings --
--- vim.g.mapleader = " "
--- vim.g.maplocalleader = "\\"
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 vim.wo.number = true
 vim.g.mouse = 'a'
 vim.opt.encoding='utf-8'
