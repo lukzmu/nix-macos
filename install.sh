@@ -10,7 +10,8 @@ brew install \
     mise \
     lazydocker \
     lazygit \
-    stow
+    stow \
+    wezterm
 
 # Setup ZSH Shell
 chsh -s $(which zsh)
