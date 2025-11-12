@@ -30,7 +30,7 @@ stow configuration -t ~/
 | [PyEnv](https://github.com/pyenv/pyenv)              | Python version management                        |
 | [Lazy Git](https://github.com/jesseduffield/lazygit) | Terminal UI for git commands                     |
 
-## Future improvements:
+## Future improvements
 
 - [ ] Automate tool installation with [mise](https://mise.jdx.dev/)
 - [ ] Add more fancy `nvim` plugins **(as now only basic setup is delivered)**

@@ -8,6 +8,7 @@ config.window_background_opacity = 0.9
 config.macos_window_background_blur = 10
 config.font_size = 11
 config.send_composed_key_when_left_alt_is_pressed = true
+config.color_scheme = "Catppuccin Mocha"
 
 local act = wezterm.action
 config.keys = {
