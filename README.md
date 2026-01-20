@@ -23,4 +23,4 @@ TODO: Add installation description with Mise.
 
 ## Attribution
 
-- Awesome *"Shadow over Innsmouth"* wallpeper was created by [Guillem H. Pongiluppi](https://www.artstation.com/artwork/oZbyJ).
+- Awesome *"Shadow over Innsmouth"* wallpaper was created by [Guillem H. Pongiluppi](https://www.artstation.com/artwork/oZbyJ).
