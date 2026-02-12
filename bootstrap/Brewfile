@@ -1,0 +1,37 @@
+tap "caskroom/cask"
+tap "hashicorp/tap"
+tap "kaushiksrini/parqeye"
+# Improved top (interactive process viewer)
+brew "htop"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Python version management
+brew "pyenv"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Thin wrapper for Terraform e.g. for locking state
+brew "terragrunt"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Terraform
+brew "hashicorp/tap/terraform"
+# Parquet viewer for the command line
+brew "kaushiksrini/parqeye/parqeye"
+# Web browser focusing on privacy
+cask "brave-browser"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Instant messaging application focusing on security
+cask "signal"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
