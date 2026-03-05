@@ -1,12 +1,11 @@
-{ ... }:
-{
+{...}: {
   programs.git = {
     enable = true;
 
     settings = {
       user = {
-      	name = "Lukasz Zmudzinski";
-	email = "lukasz@zmudzinski.me";
+        name = "Lukasz Zmudzinski";
+        email = "lukasz@zmudzinski.me";
       };
 
       credential.helper = "cache";

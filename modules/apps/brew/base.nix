@@ -1,13 +1,12 @@
-{ ... }:
-{
-    homebrew = {
-        enable = true;
-        casks = [
-            "rectangle"
-        ];
-        brews = [
-	        "diskonaut"
-            "mas"
-        ];
-    };
+{...}: {
+  homebrew = {
+    enable = true;
+    casks = [
+      "rectangle"
+    ];
+    brews = [
+      "diskonaut"
+      "mas"
+    ];
+  };
 }

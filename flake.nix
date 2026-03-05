@@ -12,47 +12,58 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, agenix, nixvim }:
-  let
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    nix-darwin,
+    home-manager,
+    agenix,
+    nixvim,
+  }: let
     lib = nixpkgs.lib;
 
-    mkDarwin = { hostName, system, username, userHome, profiles}:
-        nix-darwin.lib.darwinSystem {
-            inherit system;
-            specialArgs = {
-                inherit inputs hostName username userHome profiles;
-            };
-            modules = [
-                ./modules/darwin/core.nix
-                ./modules/darwin/system.nix
-                ./modules/apps
-                ./hosts/${hostName}
+    mkDarwin = {
+      hostName,
+      system,
+      username,
+      userHome,
+      profiles,
+    }:
+      nix-darwin.lib.darwinSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs hostName username userHome profiles;
+        };
+        modules = [
+          ./modules/darwin/core.nix
+          ./modules/darwin/system.nix
+          ./modules/apps
+          ./hosts/${hostName}
 
-                home-manager.darwinModules.home-manager
-                {
-                    users.users.${username}.home = userHome;
-                    home-manager.useGlobalPkgs = true;
-                    home-manager.backupFileExtension = "backup";
-                    home-manager.extraSpecialArgs = {
-                        inherit inputs hostName username userHome profiles;
-                    };
-                    home-manager.users.${username} = import ./home.nix;
-                }
-            ];
-        };
-  in 
-  {
+          home-manager.darwinModules.home-manager
+          {
+            users.users.${username}.home = userHome;
+            home-manager.useGlobalPkgs = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.extraSpecialArgs = {
+              inherit inputs hostName username userHome profiles;
+            };
+            home-manager.users.${username} = import ./home.nix;
+          }
+        ];
+      };
+  in {
     darwinConfigurations = {
-        terra = mkDarwin {
-            hostName = "terra";
-            system = "aarch64-darwin";
-            username = "lukzmu";
-            userHome = "/Users/lukzmu";
-            profiles = [ "base" "dev" "desktop" "gaming" ];
-        };
+      terra = mkDarwin {
+        hostName = "terra";
+        system = "aarch64-darwin";
+        username = "lukzmu";
+        userHome = "/Users/lukzmu";
+        profiles = ["base" "dev" "desktop" "gaming"];
+      };
     };
     darwinPackages = {
-        terra = self.darwinConfigurations.terra.pkgs;
+      terra = self.darwinConfigurations.terra.pkgs;
     };
   };
 }

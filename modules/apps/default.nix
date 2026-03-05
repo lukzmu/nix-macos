@@ -1,12 +1,14 @@
-{ lib, profiles, ... }:
-let
+{
+  lib,
+  profiles,
+  ...
+}: let
   has = p: lib.elem p profiles;
   bundle = name: [
     ./nix/${name}.nix
     ./brew/${name}.nix
   ];
-in
-{
+in {
   imports =
     (lib.optionals (has "base") (bundle "base"))
     ++ (lib.optionals (has "dev") (bundle "dev"))

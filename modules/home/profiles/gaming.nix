@@ -1,4 +1,3 @@
-{ ... }:
-{
-    # Gaming profile is currently package-driven via modules/apps/*/gaming.nix.
+{...}: {
+  # Gaming profile is currently package-driven via modules/apps/*/gaming.nix.
 }

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
-    networking.hostName = "terra";
-    system.primaryUser = "lukzmu";
+{pkgs, ...}: {
+  networking.hostName = "terra";
+  system.primaryUser = "lukzmu";
 }

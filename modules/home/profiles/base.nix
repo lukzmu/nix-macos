@@ -1,7 +1,6 @@
-{ ... }:
-{
-    imports = [
-    	../programs/shells/zsh
-    	../programs/vcs/git
-    ];
+{...}: {
+  imports = [
+    ../programs/shells/zsh
+    ../programs/vcs/git
+  ];
 }

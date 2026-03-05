@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   nixpkgs = {
     config = {
       allowUnfreePredicate = pkg:
@@ -12,7 +16,7 @@
   nix = {
     settings = {
       build-users-group = "nixbld";
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = ["nix-command" "flakes"];
       bash-prompt-prefix = "(nix:$name) ";
       max-jobs = "auto";
       substituters = [
@@ -23,7 +27,7 @@
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
         "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
       ];
-      extra-nix-path = [ "nixpkgs=flake:nixpkgs" ];
+      extra-nix-path = ["nixpkgs=flake:nixpkgs"];
     };
   };
 }
