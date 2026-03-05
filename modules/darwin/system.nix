@@ -28,6 +28,7 @@
           "/Applications/Battle.net.app"
           "/Applications/CurseForge.app"
           "/Applications/Warcraft Logs Uploader.app"
+          "/Applications/Steam.app"
           {spacer = {small = true;};}
           "/System/Applications/Music.app"
           "/System/Applications/Podcasts.app"
