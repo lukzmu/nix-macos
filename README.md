@@ -1,7 +1,7 @@
 ![GitHub License](https://img.shields.io/github/license/lukzmu/nix-macos)
 ![Static Badge](https://img.shields.io/badge/system-MacOS-blue)
 
-# 🍏 MacOS Nix + Home Manager configuration by [@lukzmu](https://github.com/lukzmu)
+# 🍏 MacOS Nix + Home Manager setup by [@lukzmu](https://github.com/lukzmu)
 
 This repository holds code for my Nix + Home Manager configuration for MacOS. This configuration is created for my personal purposes, but you are free to experiment and set up your own environments with it. Some of the features that it brings to the table:
 
