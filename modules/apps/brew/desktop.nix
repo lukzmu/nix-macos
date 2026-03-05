@@ -2,6 +2,7 @@
   homebrew = {
     enable = true;
     casks = [
+      "brave-browser"
       "signal"
     ];
     masApps = {
