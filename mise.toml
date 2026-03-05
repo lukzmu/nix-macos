@@ -19,7 +19,7 @@ arg "<host>" help = "Target host" {
 run = "sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#${usage_host}"
 
 [tasks.purge]
-description = "Purge old podman/docker images"
+description = "Purge old nix builds"
 run = "sudo nix-collect-garbage -d"
 
 [tasks.prek-run]
