@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   security.pam.services.sudo_local.touchIdAuth = true;
   system = {
     defaults = {
@@ -13,6 +13,28 @@
         show-process-indicators = true;
         show-recents = false;
         tilesize = 32;
+        persistent-apps = [
+            "/Applications/Nix Apps/Brave Browser.app"
+            "/System/Applications/Mail.app"
+            "/System/Applications/Calendar.app"
+            "/System/Applications/Reminders.app"
+            "/System/Applications/Notes.app"
+            "/Applications/WezTerm.app"
+            { spacer = { small = true; }; }
+            "/System/Applications/Messages.app"
+            "/Applications/Signal.app"
+            "/Applications/Nix Apps/Discord.app"
+            { spacer = { small = true; }; }
+            "/Applications/Battle.net.app"
+            "/Applications/CurseForge.app"
+            "/Applications/Warcraft Logs Uploader.app"
+            { spacer = { small = true; }; }
+            "/System/Applications/Music.app"
+            "/System/Applications/Podcasts.app"
+            "/System/Applications/Journal.app"
+            "/System/Applications/Photos.app"
+            { spacer = { small = true; }; }
+        ];
       };
       finder = {
         _FXShowPosixPathInTitle = true;
