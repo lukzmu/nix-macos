@@ -5,8 +5,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
     aliases
     dbt
-    docker
-    docker-compose
     git
     python
     zsh-autosuggestions
