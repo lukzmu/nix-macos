@@ -46,7 +46,7 @@ To change enabled profile environments for a host, edit the `profiles = [...]` l
 
 ## Known issues
 
-- `battle-net` homebrew cask is installed, but only as a standalone setup app. You need to run it to actually install the app.
+- `battle-net` homebrew cask is installed, but only as a standalone setup app. You need to run it to actually install the app. After everything works just fine.
 
 ## Attribution
 

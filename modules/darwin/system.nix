@@ -14,7 +14,7 @@
         show-recents = false;
         tilesize = 32;
         persistent-apps = [
-            "/Applications/Nix Apps/Brave Browser.app"
+            "/Applications/Brave Browser.app"
             "/System/Applications/Mail.app"
             "/System/Applications/Calendar.app"
             "/System/Applications/Reminders.app"
