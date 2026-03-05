@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/lukzmu/.dotfiles)
+![GitHub License](https://img.shields.io/github/license/lukzmu/nix-macos)
 ![Static Badge](https://img.shields.io/badge/system-MacOS-blue)
 
 # 🍏 MacOS Nix + Home Manager configuration by [@lukzmu](https://github.com/lukzmu)
@@ -30,7 +30,7 @@ To change enabled profile environments for a host, edit the `profiles = [...]` l
 
 | Host | Machine | Platform | Primary user | Enabled profiles |
 | --- | --- | --- | --- | --- |
-| `terra` | MacBook Pro (main) | `aarch64-darwin` | `lukzmu` | `base`, `dev`, `desktop`, `gaming` |
+| `terra` | MacBook Pro | `aarch64-darwin` | `lukzmu` | `base`, `dev`, `desktop`, `gaming` |
 
 ## Repository Layout (What Is Defined Where)
 
