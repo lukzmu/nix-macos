@@ -13,7 +13,6 @@ Icon?
 .VolumeIcon.icns
 
 # Quick Look thumbnails
-._*
 *.qlcache
 *.qlo
 
