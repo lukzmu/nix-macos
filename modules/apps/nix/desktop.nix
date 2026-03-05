@@ -1,3 +1,5 @@
-{...}: {
-  environment.systemPackages = [];
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    brave
+  ];
 }

@@ -44,6 +44,10 @@ To change enabled profile environments for a host, edit the `profiles = [...]` l
 | `modules/home/programs/` | Program-specific user configs (shell, git, editor, terminal). |
 | `modules/home/theme/` | Theme and wallpaper-related configuration. |
 
+## Known issues
+
+- `battle-net` homebrew cask is installed, but only as a standalone setup app. You need to run it to actually install the app.
+
 ## Attribution
 
 - Awesome wallpaper: *Shadow over Innsmouth* created by [Guillem H. Pongiluppi](https://www.artstation.com/artwork/oZbyJ)
