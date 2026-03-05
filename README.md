@@ -26,6 +26,19 @@ sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#terra
 
 To change enabled profile environments for a host, edit the `profiles = [...]` list in `flake.nix`, then run `darwin-rebuild switch` again.
 
+## Development and everyday usage
+
+To ease development you can use `mise` commands.
+
+| Command | Description |
+| --- | --- |
+| `mise lint` | Lint nix configurations |
+| `mise fix` | Fix improper nix configurations |
+| `mise switch` | Build and switch to new configuration |
+| `mise purge` | Cleanup old builds |
+| `mise prek-install` | Install prek hooks |
+| `mise prek-run` | Use prek hooks manually |
+
 ## Existing Configurations
 
 | Host | Machine | Platform | Primary user | Enabled profiles |
