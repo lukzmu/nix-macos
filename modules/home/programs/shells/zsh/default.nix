@@ -20,13 +20,15 @@
       lg = "lazygit";
       img = "wezterm imgcat";
     };
+  };
 
-    initExtra = ''
-      eval "$(starship init zsh)"
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
-      export PYENV_ROOT="$HOME/.pyenv"
-      [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-      eval "$(pyenv init - path)"
-    '';
+  programs.pyenv = {
+    enable = true;
+    enableZshIntegration = true;
   };
 }

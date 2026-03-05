@@ -1,4 +1,7 @@
 { ... }:
 {
-    # Base profile
+    imports = [
+    	../programs/shells/zsh
+    	../programs/vcs/git
+    ];
 }

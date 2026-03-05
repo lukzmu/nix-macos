@@ -6,6 +6,7 @@
             "rectangle"
         ];
         brews = [
+	        "diskonaut"
             "mas"
         ];
     };

@@ -1,4 +1,4 @@
 { ... }:
 {
-  # Reserved for game-specific shell aliases, overlays, and per-user settings.
+    # Gaming profile is currently package-driven via modules/apps/*/gaming.nix.
 }

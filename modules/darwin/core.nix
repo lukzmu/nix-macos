@@ -1,5 +1,14 @@
 { config, lib, pkgs, ... }:
 {
+  nixpkgs = {
+    config = {
+      allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+          "terraform"
+        ];
+    };
+  };
+
   nix = {
     settings = {
       build-users-group = "nixbld";

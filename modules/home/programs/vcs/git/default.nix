@@ -3,12 +3,12 @@
   programs.git = {
     enable = true;
 
-    userName = "Lukasz Zmudzinski";
-    userEmail = "lukasz@zmudzinski.me";
+    settings = {
+      user = {
+      	name = "Lukasz Zmudzinski";
+	email = "lukasz@zmudzinski.me";
+      };
 
-    delta.enable = true;
-
-    extraConfig = {
       credential.helper = "cache";
 
       pager = {
@@ -60,6 +60,11 @@
         updateRefs = true;
       };
     };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 
   home.file.".gitignore-global".source = ./gitignore-global;
