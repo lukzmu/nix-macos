@@ -33,7 +33,6 @@
             "/System/Applications/Podcasts.app"
             "/System/Applications/Journal.app"
             "/System/Applications/Photos.app"
-            { spacer = { small = true; }; }
         ];
       };
       finder = {
