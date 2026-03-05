@@ -19,6 +19,10 @@
       lg = "lazygit";
       img = "wezterm imgcat";
     };
+
+    initContent = ''
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    '';
   };
 
   programs.starship = {
