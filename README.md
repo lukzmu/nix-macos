@@ -1,26 +1,49 @@
-# 💻 `.dotfiles` - MacOS configuration by [@lukzmu](https://codeberg.org/lukzmu/)
+![GitHub License](https://img.shields.io/github/license/lukzmu/.dotfiles)
+![Static Badge](https://img.shields.io/badge/system-MacOS-blue)
+
+# 🍏 MacOS Nix + Home Manager configuration by [@lukzmu](https://github.com/lukzmu)
+
+This repository holds code for my Nix + Home Manager configuration for MacOS. This configuration is created for my personal purposes, but you are free to experiment and set up your own environments with it. Some of the features that it brings to the table:
+
+- Complete dev setup with wezterm, neovim, and more,
+- MacOS customizations and theming,
+- Structure for adding more hosts easily,
+- Nix and Homebrew package systems.
 
 ![Screenshot](.github/screenshot.png)
 
-While this repository is public, the configurations are mostly for personal use. Nothing here is super `secret`, so feel free to pick up what you like and use it for your own configurations or even let it act as inspiration. The setup is prepared for `MacOS`.
+## Requirements
 
-## Installation
+- [Lix](https://lix.systems) - *highly recommend this one for MacOS, as it makes life much easier*.
 
-TODO: Add installation description with Mise.
+## Activating configurations
 
-## Available tools
+To activate the `terra` environment simply run the following command in the downloaded repository:
 
-| **Tool**                                             | **Description**                                  |
-|------------------------------------------------------|--------------------------------------------------|
-| [Oh My Zsh](https://ohmyz.sh/)                       | The default shell + framework for the system     |
-| [Stow](https://www.gnu.org/software/stow/)           | Configuration symlink manager for configurations |
-| [WezTerm](https://wezterm.org/)                      | The default terminal application                 |
-| [Mise](https://mise.jdx.dev/)                        | Tool installation and environment management     |
-| [NeoVim](https://neovim.io/)                         | Default code and file editor                     |
-| [PyEnv](https://github.com/pyenv/pyenv)              | Python version management                        |
-| [Lazy Git](https://github.com/jesseduffield/lazygit) | Terminal UI for git commands                     |
+```bash
+sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#terra
+```
 
+To change enabled profile environments for a host, edit the `profiles = [...]` list in `flake.nix`, then run `darwin-rebuild switch` again.
+
+## Existing Configurations
+
+| Host | Machine | Platform | Primary user | Enabled profiles |
+| --- | --- | --- | --- | --- |
+| `terra` | MacBook Pro (main) | `aarch64-darwin` | `lukzmu` | `base`, `dev`, `desktop`, `gaming` |
+
+## Repository Layout (What Is Defined Where)
+
+| Path | What it defines |
+| --- | --- |
+| `flake.nix` | Main flake entrypoint: inputs, hosts, and enabled profiles. |
+| `home.nix` | Home Manager entrypoint for user-level configuration. |
+| `modules/darwin/` | System-level macOS and Nix Darwin settings. |
+| `modules/apps/` | Package/application definitions (Nix + Homebrew) by profile. |
+| `modules/home/profiles/` | Profile definitions used by Home Manager (`base`, `dev`, etc.). |
+| `modules/home/programs/` | Program-specific user configs (shell, git, editor, terminal). |
+| `modules/home/theme/` | Theme and wallpaper-related configuration. |
 
 ## Attribution
 
-- Awesome *"Shadow over Innsmouth"* wallpaper was created by [Guillem H. Pongiluppi](https://www.artstation.com/artwork/oZbyJ).
+- Awesome wallpaper: *Shadow over Innsmouth* created by [Guillem H. Pongiluppi](https://www.artstation.com/artwork/oZbyJ)
