@@ -10,10 +10,11 @@
         "dbt"
         "git"
         "python"
-        "zsh-autosuggestions"
-        "zsh-syntax-highlighting"
       ];
     };
+
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
     shellAliases = {
       lg = "lazygit";
