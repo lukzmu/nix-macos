@@ -4,6 +4,7 @@
     lazygit
     mise
     neovim
+    nodejs
     podman
     ripgrep
     terraform
