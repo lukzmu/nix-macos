@@ -8,7 +8,6 @@
       "kaushiksrini/parqeye/parqeye"
     ];
     casks = [
-      "codex"
       "wezterm"
     ];
   };
