@@ -1,10 +1,11 @@
-{...}: {
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    brave
+    signal-desktop
+    thunderbird
+  ];
   homebrew = {
     enable = true;
-    casks = [
-      "brave-browser"
-      "signal"
-    ];
     masApps = {
       "Amphetamine" = 937984704;
       "Brother iPrint&Scan" = 1193539993;

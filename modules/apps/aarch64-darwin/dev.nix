@@ -12,5 +12,15 @@
     ripgrep
     terraform
     terragrunt
+    wezterm
   ];
+  homebrew = {
+    enable = true;
+    taps = [
+      "kaushiksrini/parqeye"
+    ];
+    brews = [
+      "kaushiksrini/parqeye/parqeye"
+    ];
+  };
 }

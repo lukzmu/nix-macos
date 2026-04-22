@@ -30,9 +30,8 @@
       profiles,
     }:
       nix-darwin.lib.darwinSystem {
-        inherit system;
         specialArgs = {
-          inherit inputs hostName username userHome profiles;
+          inherit inputs hostName system username userHome profiles;
         };
         modules = [
           ./modules/darwin/core.nix
@@ -47,7 +46,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = {
-              inherit inputs hostName username userHome profiles;
+              inherit inputs hostName system username userHome profiles;
             };
             home-manager.users.${username} = import ./home.nix;
           }

@@ -27,7 +27,6 @@
           {spacer = {small = true;};}
           "/Applications/Battle.net.app"
           "/Applications/CurseForge.app"
-          "/Applications/Warcraft Logs Uploader.app"
           "/Applications/Steam.app"
           {spacer = {small = true;};}
           "/System/Applications/Music.app"
@@ -55,7 +54,7 @@
       NSGlobalDomain = {
         AppleInterfaceStyle = "Dark";
         ApplePressAndHoldEnabled = false;
-        AppleShowAllExtensions = true;
+        AppleShowAllExtensions = false;
         AppleShowAllFiles = true;
         InitialKeyRepeat = 15;
         NSAutomaticCapitalizationEnabled = false;

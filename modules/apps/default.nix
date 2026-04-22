@@ -1,12 +1,12 @@
 {
   lib,
+  system,
   profiles,
   ...
 }: let
   has = p: lib.elem p profiles;
   bundle = name: [
-    ./nix/${name}.nix
-    ./brew/${name}.nix
+    ./${system}/${name}.nix
   ];
 in {
   imports =

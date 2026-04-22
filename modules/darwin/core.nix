@@ -2,9 +2,11 @@
   config,
   lib,
   pkgs,
+  system,
   ...
 }: {
   nixpkgs = {
+    hostPlatform = system;
     config = {
       allowUnfree = true;
     };
