@@ -36,7 +36,6 @@
         modules = [
           ./modules/darwin/core.nix
           ./modules/darwin/system.nix
-          ./modules/darwin/profiles
           ./modules/apps
           ./hosts/${hostName}
 

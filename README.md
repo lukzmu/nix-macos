@@ -51,7 +51,8 @@ To ease development you can use `mise` commands.
 | --- | --- |
 | `flake.nix` | Main flake entrypoint: inputs, hosts, and enabled profiles. |
 | `home.nix` | Home Manager entrypoint for user-level configuration. |
-| `modules/darwin/` | System-level macOS and Nix Darwin settings. |
+| `hosts/` | Host-specific macOS settings, identities, and overrides. |
+| `modules/darwin/` | Shared nix-darwin baseline settings. |
 | `modules/apps/` | Package/application definitions (Nix + Homebrew) by profile. |
 | `modules/home/profiles/` | Profile definitions used by Home Manager (`base`, `dev`, etc.). |
 | `modules/home/programs/` | Program-specific user configs (shell, git, editor, terminal). |

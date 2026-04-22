@@ -5,7 +5,6 @@
   ...
 }: let
   has = p: lib.elem p profiles;
-  spacer = {spacer = {small = true;};};
 in {
   security.pam.services.sudo_local.touchIdAuth = true;
 
