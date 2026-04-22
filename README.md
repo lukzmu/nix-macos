@@ -43,7 +43,7 @@ To ease development you can use `mise` commands.
 
 | Host | Machine | Platform | Primary user | Enabled profiles |
 | --- | --- | --- | --- | --- |
-| `terra` | MacBook Pro | `aarch64-darwin` | `lukzmu` | `base`, `dev`, `desktop`, `gaming` |
+| `terra` | MacBook Pro | `aarch64-darwin` | `lukzmu` | `base`, `dev`, `personal`, `gaming` |
 
 ## Repository Layout (What Is Defined Where)
 

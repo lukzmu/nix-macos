@@ -12,6 +12,6 @@ in {
   imports =
     (lib.optionals (has "base") (bundle "base"))
     ++ (lib.optionals (has "dev") (bundle "dev"))
-    ++ (lib.optionals (has "desktop") (bundle "desktop"))
+    ++ (lib.optionals (has "personal") (bundle "personal"))
     ++ (lib.optionals (has "gaming") (bundle "gaming"));
 }

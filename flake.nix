@@ -36,7 +36,7 @@
         modules = [
           ./modules/darwin/core.nix
           ./modules/darwin/system.nix
-          ./modules/darwin/browser.nix
+          ./modules/darwin/profiles
           ./modules/apps
           ./hosts/${hostName}
 
@@ -59,7 +59,7 @@
         system = "aarch64-darwin";
         username = "lukzmu";
         userHome = "/Users/lukzmu";
-        profiles = ["base" "dev" "desktop" "gaming"];
+        profiles = ["base" "dev" "personal" "gaming"];
       };
     };
     darwinPackages = {
