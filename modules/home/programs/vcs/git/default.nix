@@ -10,12 +10,6 @@
 
       credential.helper = "cache";
 
-      pager = {
-        log = "delta";
-        reflog = "delta";
-        show = "delta";
-      };
-
       column.ui = "auto";
       branch.sort = "-commiterdate";
       tag.sort = "version:refname";
