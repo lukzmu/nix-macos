@@ -8,6 +8,7 @@
       "battle-net"
       "curseforge"
       "steam"
+      "warcraft-logs-uploader"
     ];
   };
 }
