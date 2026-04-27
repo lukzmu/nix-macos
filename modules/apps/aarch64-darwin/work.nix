@@ -7,6 +7,7 @@
   homebrew = {
     enable = true;
     casks = [
+      "gcloud-cli"
       "google-gemini"
       "microsoft-teams"
     ];
