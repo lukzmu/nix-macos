@@ -13,7 +13,7 @@ run = "nix run nixpkgs#alejandra -- ."
 description = "Build and switch nix-darwin in one command"
 usage = '''
 arg "<host>" help = "Target host" {
-  choices "terra"
+  choices "terra" "luna"
 }
 '''
 run = "sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#${usage_host}"

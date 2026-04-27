@@ -60,9 +60,17 @@
         userHome = "/Users/lukzmu";
         profiles = ["base" "dev" "personal" "gaming"];
       };
+      luna = mkDarwin {
+        hostName = "luna";
+        system = "aarch64-darwin";
+        username = "lukasz.zmudzinski@stxnext.pl";
+        userHome = "/Users/lukasz.zmudzinski@stxnext.pl";
+        profiles = ["base" "dev" "work"];
+      };
     };
     darwinPackages = {
       terra = self.darwinConfigurations.terra.pkgs;
+      luna = self.darwinConfigurations.luna.pkgs;
     };
   };
 }
