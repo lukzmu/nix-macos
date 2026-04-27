@@ -35,7 +35,7 @@ in {
       AppleShowAllExtensions = false;
       AppleShowAllFiles = true;
       FXEnableExtensionChangeWarning = false;
-      FXPrefferedViewStyle = "clmv";
+      FXPreferredViewStyle = "clmv";
       ShowPathbar = true;
       ShowStatusBar = true;
     };
