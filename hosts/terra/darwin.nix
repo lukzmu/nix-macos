@@ -33,6 +33,8 @@ in {
         ]
         ++ lib.optionals (has "dev") [
           "/Applications/WezTerm.app"
+          "/Applications/Xcode.app"
+          "/Applications/Nix Apps/WezTerm.app"
         ]
         ++ lib.optionals (has "gaming") [
           "/Applications/Nix Apps/Discord.app"
