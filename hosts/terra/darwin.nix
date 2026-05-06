@@ -37,7 +37,7 @@ in {
           "/Applications/Nix Apps/WezTerm.app"
         ]
         ++ lib.optionals (has "gaming") [
-          "/Applications/Nix Apps/Discord.app"
+          "/Applications/Discord.app"
           "/Applications/Battle.net.app"
           "/Applications/CurseForge.app"
           "/Applications/Steam.app"
