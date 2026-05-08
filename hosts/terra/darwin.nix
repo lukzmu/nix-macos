@@ -24,6 +24,7 @@ in {
       show-process-indicators = true;
       show-recents = false;
       tilesize = 32;
+      orientation = "left";
       persistent-apps =
         lib.optionals (has "personal") [
           "/Applications/Nix Apps/Brave Browser.app"
@@ -32,8 +33,6 @@ in {
           "/Applications/Nix Apps/Signal.app"
         ]
         ++ lib.optionals (has "dev") [
-          "/Applications/WezTerm.app"
-          "/Applications/Xcode.app"
           "/Applications/Nix Apps/WezTerm.app"
         ]
         ++ lib.optionals (has "gaming") [
