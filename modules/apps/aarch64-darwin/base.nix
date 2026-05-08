@@ -3,7 +3,7 @@
     fastfetch
     htop
     m-cli
-    openfetch
+    onefetch
     starship
     tree
     zsh
