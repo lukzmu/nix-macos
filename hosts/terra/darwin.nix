@@ -29,6 +29,7 @@ in {
         lib.optionals (has "personal") [
           "/Applications/Nix Apps/Brave Browser.app"
           "/Applications/Nix Apps/Thunderbird.app"
+          "/Applications/Nix Apps/Logseq.app"
           "/System/Applications/Messages.app"
           "/Applications/Nix Apps/Signal.app"
         ]

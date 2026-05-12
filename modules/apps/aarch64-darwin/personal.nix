@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     brave
+    jrnl
+    logseq
     proton-pass
     signal-desktop
     thunderbird
