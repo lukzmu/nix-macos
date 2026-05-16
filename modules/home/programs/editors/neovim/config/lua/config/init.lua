@@ -40,6 +40,8 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
+  -- Home Manager links this config through the Nix store, so keep the lockfile writable.
+  lockfile = vim.fn.stdpath("state") .. "/lazy/lazy-lock.json",
   checker = { enabled = true },
 })
 
