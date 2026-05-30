@@ -24,7 +24,6 @@ in {
       show-process-indicators = true;
       show-recents = false;
       tilesize = 32;
-      orientation = "left";
       persistent-apps =
         lib.optionals (has "personal") [
           "/Applications/Nix Apps/Brave Browser.app"
@@ -34,12 +33,13 @@ in {
           "/Applications/Nix Apps/Signal.app"
         ]
         ++ lib.optionals (has "dev") [
-          "/Applications/Nix Apps/WezTerm.app"
+          "/Applications/Ghostty.app"
         ]
         ++ lib.optionals (has "gaming") [
           "/Applications/Discord.app"
           "/Applications/Battle.net.app"
           "/Applications/CurseForge.app"
+          "/Applications/Warcraft Logs Uploader.app"
           "/Applications/Steam.app"
         ];
     };

@@ -10,10 +10,12 @@
     ripgrep
     terraform
     terragrunt
-    wezterm
   ];
   homebrew = {
     enable = true;
+    casks = [
+      "ghostty" # Not available in nix darwin
+    ];
     taps = [
       "kaushiksrini/parqeye"
     ];
