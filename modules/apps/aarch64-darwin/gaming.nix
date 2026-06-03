@@ -5,8 +5,10 @@
       "battle-net"
       "curseforge"
       "discord" # nix discord has problems with updates on MacOS
-      "steam"
-      "warcraft-logs-uploader"
     ];
+    masApps = {
+      "Cult Of The Lamb" = 1639580858;
+      "DREDGE+" = 6753196416;
+    };
   };
 }

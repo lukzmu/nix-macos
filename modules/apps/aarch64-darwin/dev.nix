@@ -22,5 +22,9 @@
     brews = [
       "kaushiksrini/parqeye/parqeye"
     ];
+    masApps = {
+      "Developer" = 640199958;
+      "Xcode" = 497799835;
+    };
   };
 }

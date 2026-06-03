@@ -8,10 +8,6 @@
 in {
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  system.activationScripts.defaultBrowser.text = ''
-    ${pkgs.m-cli}/bin/m browser brave || true
-  '';
-
   system.defaults = {
     CustomUserPreferences = {
       "com.apple.AdLib" = {
@@ -25,22 +21,30 @@ in {
       show-recents = false;
       tilesize = 32;
       persistent-apps =
-        lib.optionals (has "personal") [
-          "/Applications/Nix Apps/Brave Browser.app"
-          "/Applications/Nix Apps/Thunderbird.app"
-          "/Applications/Nix Apps/Logseq.app"
+        [
+          "/Applications/Safari.app"
+          "/System/Applications/Calendar.app"
+          "/System/Applications/Mail.app"
+          "/System/Applications/Notes.app"
           "/System/Applications/Messages.app"
-          "/Applications/Nix Apps/Signal.app"
         ]
         ++ lib.optionals (has "dev") [
           "/Applications/Ghostty.app"
+          "/Applications/Xcode.app"
         ]
         ++ lib.optionals (has "gaming") [
           "/Applications/Discord.app"
           "/Applications/Battle.net.app"
           "/Applications/CurseForge.app"
-          "/Applications/Warcraft Logs Uploader.app"
-          "/Applications/Steam.app"
+        ]
+        ++ lib.optionals (has "personal") [
+          "/Applications/HomeCam.app"
+        ]
+        ++ [
+          "/System/Applications/Home.app"
+          "/System/Applications/Photos.app"
+          "/System/Applications/Music.app"
+          "/System/Applications/Podcasts.app"
         ];
     };
     finder = {
