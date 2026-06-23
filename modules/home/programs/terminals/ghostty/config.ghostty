@@ -13,7 +13,6 @@ font-size = 12
 language = en
 macos-auto-secure-input = true
 macos-dock-drop-behavior = new-tab
-macos-icon = retro
 macos-secure-input-indication = true
 macos-titlebar-proxy-icon = hidden
 macos-window-buttons = hidden

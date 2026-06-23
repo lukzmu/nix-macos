@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   homebrew = {
     enable = true;
+    casks = [
+      "netnewswire"
+    ];
     masApps = {
       "Amphetamine" = 937984704;
       "Brother iPrint&Scan" = 1193539993;

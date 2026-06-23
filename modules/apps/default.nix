@@ -14,5 +14,6 @@ in {
     ++ (lib.optionals (has "dev") (bundle "dev"))
     ++ (lib.optionals (has "work") (bundle "work"))
     ++ (lib.optionals (has "personal") (bundle "personal"))
-    ++ (lib.optionals (has "gaming") (bundle "gaming"));
+    ++ (lib.optionals (has "gaming") (bundle "gaming"))
+    ++ (lib.optionals (has "ai") (bundle "ai"));
 }
