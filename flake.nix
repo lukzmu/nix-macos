@@ -58,7 +58,7 @@
         system = "aarch64-darwin";
         username = "lukzmu";
         userHome = "/Users/lukzmu";
-        profiles = ["base" "dev" "personal" "gaming"];
+        profiles = ["base" "dev" "personal" "gaming" "ai"];
       };
       luna = mkDarwin {
         hostName = "luna";
