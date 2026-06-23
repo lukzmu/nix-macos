@@ -7,7 +7,7 @@ This repository holds code for my Nix + Home Manager configuration for MacOS. Th
 - Structure for adding more hosts easily,
 - Nix and Homebrew package systems.
 
-![Screenshot](.codeberg/screenshot.png)
+![Screenshot](.github/screenshot.png)
 
 ## Requirements
 
