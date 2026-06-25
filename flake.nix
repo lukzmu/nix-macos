@@ -7,7 +7,6 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    agenix.url = "github:ryantm/agenix";
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -17,7 +16,6 @@
     nixpkgs,
     nix-darwin,
     home-manager,
-    agenix,
     nixvim,
   }: let
     lib = nixpkgs.lib;
