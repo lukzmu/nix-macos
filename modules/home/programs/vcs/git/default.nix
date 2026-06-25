@@ -8,7 +8,7 @@
         email = "lukasz@zmudzinski.me";
       };
 
-      credential.helper = "cache";
+      credential.helper = "osxkeychain";
 
       column.ui = "auto";
       branch.sort = "-commiterdate";

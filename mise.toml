@@ -16,7 +16,7 @@ arg "<host>" help = "Target host" {
   choices "terra" "luna"
 }
 '''
-run = "sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#${usage_host}"
+run = "sudo darwin-rebuild switch --flake .#${usage_host}"
 
 [tasks.purge]
 description = "Purge old nix builds"
