@@ -29,14 +29,17 @@ in {
       show-process-indicators = true;
       show-recents = false;
       tilesize = 32;
-      persistent-apps = [
-          "/System/Applications/Home.app"
+      persistent-apps =
+        [
           "/Applications/Safari.app"
           "/System/Applications/Calendar.app"
           "/System/Applications/Mail.app"
           "/System/Applications/Reminders.app"
           "/System/Applications/Notes.app"
           "/System/Applications/Messages.app"
+        ]
+        ++ lib.optionals (has "personal") [
+          "/Applications/Nix Apps/Signal.app"
         ]
         ++ lib.optionals (has "dev") [
           "/Applications/Ghostty.app"
@@ -52,6 +55,7 @@ in {
           "/Applications/NetNewsWire.app"
         ]
         ++ [
+          "/System/Applications/Home.app"
           "/System/Applications/Journal.app"
           "/System/Applications/Music.app"
           "/System/Applications/Podcasts.app"

@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    signal-desktop
+  ];
   homebrew = {
     enable = true;
     casks = [
