@@ -1,6 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     ollama
-    pi-coding-agent
   ];
+  homebrew = {
+    casks = [
+      "claude-code"
+    ];
+  };
 }

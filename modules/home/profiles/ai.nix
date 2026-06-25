@@ -1,7 +1,7 @@
 {...}: {
   imports = [
-    ../programs/agents/pi
+    ../programs/agents/claude
   ];
 
-   programs.pi-coding-agent.enable = true;
+  programs.claude-code-agent.enable = true;
 }
