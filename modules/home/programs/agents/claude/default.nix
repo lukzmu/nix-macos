@@ -23,9 +23,10 @@ in {
       executable = true;
     };
 
-    # WARNING: ~/.claude/agents is a read-only Nix store symlink. Claude Code cannot
-    # write new agents here at runtime. Any changes require modifying the source in
-    # config/.claude/agents/ and running darwin-rebuild switch.
+    # WARNING: ~/.claude/agents and ~/.claude/rules are read-only Nix store symlinks.
+    # Claude Code cannot write here at runtime. Any changes require modifying the source
+    # in config/.claude/agents/ or config/.claude/rules/ and running darwin-rebuild switch.
     home.file.".claude/agents".source = ./config/.claude/agents;
+    home.file.".claude/rules".source = ./config/.claude/rules;
   };
 }
