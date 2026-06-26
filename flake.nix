@@ -38,15 +38,18 @@
           ./hosts/${hostName}
 
           home-manager.darwinModules.home-manager
-          {
-            users.users.${username}.home = userHome;
+          ({pkgs, ...}: {
+            users.users.${username} = {
+              home = userHome;
+              shell = pkgs.zsh;
+            };
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = {
               inherit inputs hostName system username userHome profiles;
             };
             home-manager.users.${username} = import ./home.nix;
-          }
+          })
         ];
       };
   in {
