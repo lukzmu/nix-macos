@@ -1,7 +1,7 @@
 {...}: {
   homebrew = {
     enable = true;
-    formulae = [
+    brews = [
       "diskonaut"
       "fastfetch"
       "htop"
