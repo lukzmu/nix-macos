@@ -19,3 +19,6 @@ Icon?
 # System files
 .Spotlight-V100
 .fseventsd
+
+# Claude Code
+**/.claude/settings.local.json

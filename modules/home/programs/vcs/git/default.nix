@@ -5,13 +5,13 @@
     settings = {
       user = {
         name = "Lukasz Zmudzinski";
-        email = "lukasz@zmudzinski.me";
+        email = "lukasz@zmudzinski.sh";
       };
 
       credential.helper = "osxkeychain";
 
       column.ui = "auto";
-      branch.sort = "-commiterdate";
+      branch.sort = "-committerdate";
       tag.sort = "version:refname";
       init.defaultBranch = "main";
 
@@ -42,15 +42,17 @@
         autoupdate = true;
       };
 
-      core = {
-        excludesfile = "~/.gitignore-global";
-        attributesfile = "~/.gitattributes";
-      };
-
       rebase = {
         autoSquash = true;
         autoStash = true;
         updateRefs = true;
+      };
+
+      delta.navigate = true;
+
+      includeIf = {
+        "gitdir/i:~/developer/projects/c9h/".path = "~/.config/git/config-c9h";
+        "gitdir/i:~/developer/projects/stx/".path = "~/.config/git/config-stx";
       };
     };
   };
@@ -60,6 +62,9 @@
     enableGitIntegration = true;
   };
 
-  home.file.".gitignore-global".source = ./gitignore-global;
-  home.file.".gitattributes".source = ./gitattributes;
+  xdg.configFile."git/ignore".source = ./config/ignore;
+  xdg.configFile."git/attributes".source = ./config/attributes;
+
+  xdg.configFile."git/config-c9h".source = ./config/config-c9h;
+  xdg.configFile."git/config-stx".source = ./config/config-stx;
 }
