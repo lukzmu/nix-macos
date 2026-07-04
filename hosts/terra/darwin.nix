@@ -29,27 +29,26 @@ in {
       show-process-indicators = true;
       show-recents = false;
       tilesize = 32;
-      persistent-apps =
-        [
-          "/Applications/Brave Browser.app"
-          "/System/Applications/Calendar.app"
-          "/System/Applications/Mail.app"
-          "/Applications/Logseq.app"
-          "/System/Applications/Notes.app"
-          "/System/Applications/Messages.app"
-          "/Applications/Signal.app"
-          "/Applications/Ghostty.app"
-          "/Applications/Xcode.app"
-          "/Applications/Discord.app"
-          "/Applications/Battle.net.app"
-          "/Applications/CurseForge.app"
-          "/Applications/Steam.app"
-          "/Applications/NetNewsWire.app"
-          "/System/Applications/Home.app"
-          "/System/Applications/Music.app"
-          "/System/Applications/Podcasts.app"
-          "/System/Applications/Photos.app"
-        ];
+      persistent-apps = [
+        "/Applications/Brave Browser.app"
+        "/System/Applications/Calendar.app"
+        "/System/Applications/Mail.app"
+        "/Applications/Logseq.app"
+        "/System/Applications/Notes.app"
+        "/System/Applications/Messages.app"
+        "/Applications/Signal.app"
+        "/Applications/Ghostty.app"
+        "/Applications/Xcode.app"
+        "/Applications/Discord.app"
+        "/Applications/Battle.net.app"
+        "/Applications/CurseForge.app"
+        "/Applications/Steam.app"
+        "/Applications/NetNewsWire.app"
+        "/System/Applications/Home.app"
+        "/System/Applications/Music.app"
+        "/System/Applications/Podcasts.app"
+        "/System/Applications/Photos.app"
+      ];
       wvous-br-corner = 1; # Disable new note in corner
     };
     finder = {
