@@ -1,21 +1,19 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    fastfetch
-    htop
-    m-cli
-    onefetch
-    starship
-    tree
-    zsh
-  ];
+{...}: {
   homebrew = {
     enable = true;
+    formulae = [
+      "diskonaut"
+      "fastfetch"
+      "htop"
+      "m-cli"
+      "mas"
+      "onefetch"
+      "starship"
+      "tree"
+      "zsh"
+    ];
     casks = [
       "rectangle"
-    ];
-    brews = [
-      "diskonaut"
-      "mas"
     ];
   };
 }

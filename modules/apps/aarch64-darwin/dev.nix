@@ -1,26 +1,19 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    docker-compose
-    git
-    lazygit
-    mise
-    neovim
-    nodejs
-    podman
-    ripgrep
-    terraform
-    terragrunt
-  ];
+{...}: {
   homebrew = {
     enable = true;
+    formulae = [
+      "docker-compose"
+      "git"
+      "lazygit"
+      "mise"
+      "neovim"
+      "node"
+      "parqeye"
+      "podman"
+      "ripgrep"
+    ];
     casks = [
-      "ghostty" # Not available in nix darwin
-    ];
-    taps = [
-      "kaushiksrini/parqeye"
-    ];
-    brews = [
-      "kaushiksrini/parqeye/parqeye"
+      "ghostty"
     ];
     masApps = {
       "Developer" = 640199958;
