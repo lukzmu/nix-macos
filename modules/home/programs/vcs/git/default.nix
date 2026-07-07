@@ -5,7 +5,7 @@
     settings = {
       user = {
         name = "Lukasz Zmudzinski";
-        email = "lukasz@zmudzinski.sh";
+        email = "lukasz@zmudzinski.me";
       };
 
       credential.helper = "osxkeychain";
