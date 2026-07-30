@@ -1,10 +1,6 @@
 {...}: {
   homebrew = {
     enable = true;
-    casks = [
-      "netnewswire"
-      "signal"
-    ];
     masApps = {
       "Amphetamine" = 937984704;
       "Brother iPrint&Scan" = 1193539993;

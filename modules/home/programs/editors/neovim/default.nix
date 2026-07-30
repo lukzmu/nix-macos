@@ -1,6 +1,8 @@
 {...}: {
   programs.neovim = {
-    enable = true;
+    # Disabled as I don't use neovim anymore,
+    # but don't want to remove my configurations
+    enable = false;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;

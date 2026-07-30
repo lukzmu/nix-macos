@@ -24,26 +24,21 @@ in {
       minimize-to-application = true;
       mouse-over-hilite-stack = true;
       mru-spaces = false;
-      orientation = "left";
+      orientation = "bottom";
       scroll-to-open = true;
       show-process-indicators = true;
       show-recents = false;
       tilesize = 32;
       persistent-apps = [
-        "/Applications/Brave Browser.app"
+        "/Applications/Safari.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/Mail.app"
-        "/Applications/Logseq.app"
         "/System/Applications/Notes.app"
         "/System/Applications/Messages.app"
-        "/Applications/Signal.app"
         "/Applications/Ghostty.app"
-        "/Applications/Xcode.app"
         "/Applications/Discord.app"
         "/Applications/Battle.net.app"
         "/Applications/CurseForge.app"
-        "/Applications/Steam.app"
-        "/Applications/NetNewsWire.app"
         "/System/Applications/Home.app"
         "/System/Applications/Music.app"
         "/System/Applications/Podcasts.app"
@@ -92,8 +87,8 @@ in {
       "com.apple.keyboard.fnState" = false;
       "com.apple.sound.beep.feedback" = 0;
       "com.apple.swipescrolldirection" = true;
-      AppleIconAppearanceTheme = "ClearDark";
-      AppleInterfaceStyle = "Dark";
+      AppleIconAppearanceTheme = null;
+      AppleInterfaceStyle = null;
       AppleMeasurementUnits = "Centimeters";
       AppleMetricUnits = 1;
       ApplePressAndHoldEnabled = false;

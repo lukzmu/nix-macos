@@ -19,7 +19,6 @@
 in {
   imports =
     [
-      ./modules/home/theme/default.nix
       ./modules/home/programs/default.nix
     ]
     ++ profileModules;

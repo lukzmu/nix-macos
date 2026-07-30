@@ -6,7 +6,6 @@
       "git"
       "lazygit"
       "mise"
-      "neovim"
       "node"
       "parqeye"
       "podman"
@@ -14,10 +13,7 @@
     ];
     casks = [
       "ghostty"
+      "visual-studio-code"
     ];
-    masApps = {
-      "Developer" = 640199958;
-      "Xcode" = 497799835;
-    };
   };
 }
