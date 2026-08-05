@@ -24,7 +24,6 @@ shell-integration = zsh
 split-divider-color = #666666
 split-inherit-working-directory = true
 tab-inherit-working-directory = true
-theme = Catppuccin Mocha
 unfocused-split-opacity = 0.5
 window-height = 60
 window-inherit-font-size = false
