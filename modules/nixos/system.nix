@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   system.stateVersion = "26.11";
 
   boot = {
@@ -59,13 +59,28 @@
     powerOnBoot = true;
   };
 
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    browsed.enable = false;
+  };
   services.avahi = {
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
   };
-  services.printing.drivers = [pkgs.brlaser];
+
+  hardware.printers = {
+    ensureDefaultPrinter = "Brother_DCP_L3550CDW";
+    ensurePrinters = [
+      {
+        name = "Brother_DCP_L3550CDW";
+        location = "Home";
+        deviceUri = "ipp://BRWDCA2664A9E36.local/ipp/print";
+        model = "everywhere";
+        ppdOptions.PageSize = "A4";
+      }
+    ];
+  };
 
   services.fstrim.enable = true;
 
