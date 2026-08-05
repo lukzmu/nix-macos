@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   system.stateVersion = "26.11";
 
   boot = {
@@ -65,6 +65,7 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+  services.printing.drivers = [pkgs.brlaser];
 
   services.fstrim.enable = true;
 
