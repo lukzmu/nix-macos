@@ -10,13 +10,45 @@ description = "Format Nix files with alejandra"
 run = "nix run nixpkgs#alejandra -- ."
 
 [tasks.switch]
-description = "Build and switch nix-darwin in one command"
+description = "Build and switch the selected host configuration"
 usage = '''
 arg "<host>" help = "Target host" {
-  choices "terra" "luna"
+  choices "terra" "luna" "sol"
 }
 '''
-run = "sudo nix run nix-darwin/master -- switch --flake .#${usage_host}"
+run = '''
+set -eu
+if [ "$(uname -s)" = "Darwin" ]; then
+  sudo nix run nix-darwin/master -- switch --flake ".#${usage_host}"
+else
+  sudo nixos-rebuild switch --flake ".#${usage_host}"
+fi
+'''
+
+[tasks.boot]
+description = "Stage a NixOS host for the next boot - use this for kernel and NVIDIA driver changes"
+usage = '''
+arg "<host>" help = "Target host" {
+  choices "sol"
+}
+'''
+run = "sudo nixos-rebuild boot --flake .#${usage_host}"
+
+[tasks.check]
+description = "Evaluate every host configuration without building"
+run = '''
+set -eu
+nix eval --raw .#darwinConfigurations.terra.config.system.build.toplevel.drvPath
+echo
+nix eval --raw .#darwinConfigurations.luna.config.system.build.toplevel.drvPath
+echo
+nix eval --raw .#nixosConfigurations.sol.config.system.build.toplevel.drvPath
+echo
+'''
+
+[tasks.build]
+description = "Build the sol system closure without activating it"
+run = "nix build --no-link --print-out-paths .#nixosConfigurations.sol.config.system.build.toplevel"
 
 [tasks.purge]
 description = "Purge old nix builds"

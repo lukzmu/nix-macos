@@ -15,7 +15,8 @@
     ++ (lib.optionals (has "work") [./modules/home/profiles/work.nix])
     ++ (lib.optionals (has "personal") [./modules/home/profiles/personal.nix])
     ++ (lib.optionals (has "gaming") [./modules/home/profiles/gaming.nix])
-    ++ (lib.optionals (has "ai") [./modules/home/profiles/ai.nix]);
+    ++ (lib.optionals (has "ai") [./modules/home/profiles/ai.nix])
+    ++ (lib.optionals (has "desktop") [./modules/home/profiles/desktop.nix]);
 in {
   imports =
     [

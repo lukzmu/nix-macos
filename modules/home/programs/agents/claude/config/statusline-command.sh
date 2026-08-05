@@ -10,6 +10,17 @@ five_reset=$(echo "$input" | jq -r '.rate_limits.five_hour.reset_time // .rate_l
 week_pct=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')
 week_reset=$(echo "$input" | jq -r '.rate_limits.seven_day.reset_time // .rate_limits.seven_day.resets_at // .rate_limits.seven_day.reset_at // empty')
 
+# Portable date helpers: GNU coreutils vs BSD date.
+if date --version >/dev/null 2>&1; then
+  iso_to_epoch() { date -u -d "$1" '+%s' 2>/dev/null; }
+  ymd_to_abbr() { date -d "$1" '+%a' 2>/dev/null; }
+  fmt_epoch() { date -d "@$1" "+$2" 2>/dev/null; }
+else
+  iso_to_epoch() { TZ=UTC date -j -f '%Y-%m-%dT%H:%M:%SZ' "$1" '+%s' 2>/dev/null; }
+  ymd_to_abbr() { date -j -f '%Y-%m-%d' "$1" '+%a' 2>/dev/null; }
+  fmt_epoch() { date -r "$1" "+$2" 2>/dev/null; }
+fi
+
 # Current directory (abbreviated)
 cwd=$(pwd | sed "s|$HOME|~|")
 
@@ -84,11 +95,11 @@ five_time=""
 if [ -n "$five_reset" ]; then
   # Try to extract HH:MM from ISO format (2025-06-25T14:32:45Z)
   if echo "$five_reset" | grep -q 'T'; then
-    _epoch=$(TZ=UTC date -j -f '%Y-%m-%dT%H:%M:%SZ' "$five_reset" '+%s' 2>/dev/null)
-    five_time=$(date -r "$_epoch" '+%H:%M' 2>/dev/null || echo "$five_reset" | cut -d'T' -f2 | cut -d':' -f1-2)
+    _epoch=$(iso_to_epoch "$five_reset")
+    five_time=$(fmt_epoch "$_epoch" '%H:%M' || echo "$five_reset" | cut -d'T' -f2 | cut -d':' -f1-2)
   # Try to convert from seconds since epoch
   elif echo "$five_reset" | grep -qE '^[0-9]+$'; then
-    five_time=$(date -r "$five_reset" '+%H:%M' 2>/dev/null || echo "$five_reset")
+    five_time=$(fmt_epoch "$five_reset" '%H:%M' || echo "$five_reset")
   else
     five_time="$five_reset"
   fi
@@ -103,15 +114,15 @@ if [ -n "$week_reset" ]; then
   # Try to extract day+time from ISO format
   elif echo "$week_reset" | grep -q 'T'; then
     # Get the date part to check if it's today
-    _epoch=$(TZ=UTC date -j -f '%Y-%m-%dT%H:%M:%SZ' "$week_reset" '+%s' 2>/dev/null)
-    reset_date=$(date -r "$_epoch" '+%Y-%m-%d' 2>/dev/null || echo "$week_reset" | cut -d'T' -f1)
+    _epoch=$(iso_to_epoch "$week_reset")
+    reset_date=$(fmt_epoch "$_epoch" '%Y-%m-%d' || echo "$week_reset" | cut -d'T' -f1)
     today=$(date '+%Y-%m-%d')
-    time_part=$(date -r "$_epoch" '+%H:%M' 2>/dev/null || echo "$week_reset" | cut -d'T' -f2 | cut -d':' -f1-2)
+    time_part=$(fmt_epoch "$_epoch" '%H:%M' || echo "$week_reset" | cut -d'T' -f2 | cut -d':' -f1-2)
 
     if [ "$reset_date" = "$today" ]; then
       week_time="Today $time_part"
     else
-      day_abbr=$(date -j -f '%Y-%m-%d' "$reset_date" '+%a' 2>/dev/null || echo "")
+      day_abbr=$(ymd_to_abbr "$reset_date" || echo "")
       if [ -n "$day_abbr" ]; then
         week_time="$day_abbr $time_part"
       else
@@ -121,13 +132,13 @@ if [ -n "$week_reset" ]; then
   # Try to convert from seconds since epoch
   elif echo "$week_reset" | grep -qE '^[0-9]+$'; then
     today=$(date '+%Y-%m-%d')
-    reset_date=$(date -r "$week_reset" '+%Y-%m-%d' 2>/dev/null)
-    time_part=$(date -r "$week_reset" '+%H:%M' 2>/dev/null)
+    reset_date=$(fmt_epoch "$week_reset" '%Y-%m-%d')
+    time_part=$(fmt_epoch "$week_reset" '%H:%M')
 
     if [ "$reset_date" = "$today" ]; then
       week_time="Today $time_part"
     else
-      day_abbr=$(date -r "$week_reset" '+%a' 2>/dev/null)
+      day_abbr=$(fmt_epoch "$week_reset" '%a')
       week_time="$day_abbr $time_part"
     fi
   else

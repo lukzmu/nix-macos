@@ -1,0 +1,3 @@
+window-decoration = none
+gtk-single-instance = true
+background-blur = false

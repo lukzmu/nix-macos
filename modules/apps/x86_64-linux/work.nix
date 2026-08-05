@@ -1,0 +1,3 @@
+{...}: {
+  # Not supported on NixOS
+}

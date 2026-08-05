@@ -12,8 +12,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # NOTE: The claude-code binary is provided by the apps layer via Homebrew cask
-    # (modules/apps/aarch64-darwin/ai.nix). This home module only manages configuration.
     home.packages = [pkgs.jq];
 
     home.file.".claude/settings.json" = {source = ./config/.claude/settings.json;};

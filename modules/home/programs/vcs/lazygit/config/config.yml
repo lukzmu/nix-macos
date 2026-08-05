@@ -6,15 +6,5 @@ gui:
   shortTimeFormat: 15:04
   timeFormat: 2006-01-02
 notARepository: quit
-os:
-  copyToClipboardCmd: "pbcopy"
-  edit: "nvim {{filename}}"
-  editAtLine: "nvim +{{line}} {{filename}}"
-  editAtLineAndWait: "nvim +{{line}} {{filename}}"
-  open: "nvim {{filename}}"
-  openDirInEditor: "nvim {{dir}}"
-  openLink: "open {{link}}"
-  readFromClipboardCmd: "pbpaste"
-  shellFunctionsFile: "~/.zshrc"
 update:
-  method: never # handled by brew
+  method: never # handled by the package manager

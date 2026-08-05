@@ -1,0 +1,10 @@
+os:
+  copyToClipboardCmd: "wl-copy"
+  edit: "nvim {{filename}}"
+  editAtLine: "nvim +{{line}} {{filename}}"
+  editAtLineAndWait: "nvim +{{line}} {{filename}}"
+  open: "nvim {{filename}}"
+  openDirInEditor: "nvim {{dir}}"
+  openLink: "xdg-open {{link}}"
+  readFromClipboardCmd: "wl-paste --no-newline"
+  shellFunctionsFile: "~/.zshrc"

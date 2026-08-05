@@ -1,6 +1,14 @@
-{...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: let
+  isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
+in {
   programs.git = {
     enable = true;
+
+    package = lib.mkIf (!isDarwin) pkgs.gitFull;
 
     settings = {
       user = {
@@ -8,7 +16,10 @@
         email = "lukasz@zmudzinski.me";
       };
 
-      credential.helper = "osxkeychain";
+      credential.helper =
+        if isDarwin
+        then "osxkeychain"
+        else "${pkgs.gitFull}/bin/git-credential-libsecret";
 
       column.ui = "auto";
       branch.sort = "-committerdate";
