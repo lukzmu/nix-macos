@@ -13,7 +13,6 @@
     ];
     casks = [
       "ghostty"
-      "visual-studio-code"
     ];
   };
 }

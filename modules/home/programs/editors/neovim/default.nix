@@ -1,12 +1,22 @@
-{...}: {
-  programs.neovim = {
-    # Disabled as I don't use neovim anymore,
-    # but don't want to remove my configurations
-    enable = false;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
+{
+  config,
+  pkgs,
+  flakeRoot,
+  ...
+}: {
+  home.packages = [pkgs.neovim];
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 
-  xdg.configFile."nvim".source = ./config;
+  home.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
+
+  xdg.configFile."nvim".source =
+    config.lib.file.mkOutOfStoreSymlink
+    "${flakeRoot}/modules/home/programs/editors/neovim/config";
 }
