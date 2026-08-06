@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   system.stateVersion = "26.11";
 
   boot = {
@@ -62,6 +62,12 @@
   services.printing = {
     enable = true;
     browsed.enable = false;
+    # cupsd's built-in avahi client fails to resolve .local device URIs
+    # (confirmed: plain NSS/getaddrinfo resolves the printer's mDNS name
+    # fine, but cupsd's own avahi-client/D-Bus resolution path does not).
+    # Building without avahi support makes cupsd fall back to the working
+    # NSS resolution instead.
+    package = pkgs.cups.override {avahi = null;};
   };
   services.avahi = {
     enable = true;
@@ -80,6 +86,19 @@
         ppdOptions.PageSize = "A4";
       }
     ];
+  };
+
+  # Defense in depth: also wait for the network/avahi to be up and retry
+  # on failure, in case the printer is genuinely offline at activation
+  # time (the deterministic cupsd-avahi resolution bug is fixed above via
+  # services.printing.package).
+  systemd.services.ensure-printers = {
+    wants = ["network-online.target" "avahi-daemon.service"];
+    after = ["network-online.target" "avahi-daemon.service" "nss-lookup.target"];
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 30;
+    };
   };
 
   services.fstrim.enable = true;

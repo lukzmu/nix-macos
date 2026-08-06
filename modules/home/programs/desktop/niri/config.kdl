@@ -73,6 +73,21 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match is-urgent=true
+    focus-ring {
+        urgent-color "#cf222e"
+    }
+}
+
+// Electron/Qt apps (Discord, Signal) mint fresh xdg-activation tokens with
+// invalid serials when a notification or tray icon is clicked; niri drops
+// those by default as focus-steal protection, so the window never actually
+// gets focused. This tells niri to honor them anyway.
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
