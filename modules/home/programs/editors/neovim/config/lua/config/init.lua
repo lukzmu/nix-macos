@@ -19,6 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.wo.number = true
+vim.wo.relativenumber = true
 vim.g.mouse = 'a'
 vim.opt.encoding='utf-8'
 vim.opt.swapfile = false
