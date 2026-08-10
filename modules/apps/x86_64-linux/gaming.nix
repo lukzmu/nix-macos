@@ -3,6 +3,7 @@
 
   environment.systemPackages = with pkgs; [
     discord
+    heroic
     wowup-cf
   ];
 }
