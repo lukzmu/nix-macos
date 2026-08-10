@@ -1,10 +1,4 @@
-{
-  lib,
-  pkgs,
-  ...
-}: let
-  isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
-in {
+{...}: {
   programs.zsh = {
     enable = true;
 
@@ -22,21 +16,13 @@ in {
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases =
-      {
-        lg = "lazygit";
-      }
-      // lib.optionalAttrs isDarwin {
-        img = "wezterm imgcat";
-      };
+    shellAliases = {
+      lg = "lazygit";
+    };
 
-    initContent =
-      lib.optionalString isDarwin ''
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-      ''
-      + ''
-        export PATH="$HOME/.local/bin:$PATH"
-      '';
+    initContent = ''
+      export PATH="$HOME/.local/bin:$PATH"
+    '';
   };
 
   programs.starship = {

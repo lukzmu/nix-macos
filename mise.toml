@@ -13,17 +13,10 @@ run = "nix run nixpkgs#alejandra -- ."
 description = "Build and switch the selected host configuration"
 usage = '''
 arg "<host>" help = "Target host" {
-  choices "terra" "luna" "sol"
+  choices "sol"
 }
 '''
-run = '''
-set -eu
-if [ "$(uname -s)" = "Darwin" ]; then
-  sudo nix run nix-darwin/master -- switch --flake ".#${usage_host}"
-else
-  sudo nixos-rebuild switch --flake ".#${usage_host}"
-fi
-'''
+run = "sudo nixos-rebuild switch --flake .#${usage_host}"
 
 [tasks.boot]
 description = "Stage a NixOS host for the next boot - use this for kernel and NVIDIA driver changes"
@@ -36,15 +29,7 @@ run = "sudo nixos-rebuild boot --flake .#${usage_host}"
 
 [tasks.check]
 description = "Evaluate every host configuration without building"
-run = '''
-set -eu
-nix eval --raw .#darwinConfigurations.terra.config.system.build.toplevel.drvPath
-echo
-nix eval --raw .#darwinConfigurations.luna.config.system.build.toplevel.drvPath
-echo
-nix eval --raw .#nixosConfigurations.sol.config.system.build.toplevel.drvPath
-echo
-'''
+run = "nix eval --raw .#nixosConfigurations.sol.config.system.build.toplevel.drvPath"
 
 [tasks.build]
 description = "Build the sol system closure without activating it"
