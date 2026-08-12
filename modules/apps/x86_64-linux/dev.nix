@@ -6,7 +6,9 @@
     mise
     nodejs
     ripgrep
+    rustup
     gcc
     gnumake
+    pkg-config
   ];
 }
