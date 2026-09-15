@@ -5,8 +5,7 @@
       "bitwarden"
       "gcloud-cli"
       "google-chrome"
-      "google-gemini"
-      "microsoft-teams"
+      "obsidian"
       "slack"
     ];
     masApps = {

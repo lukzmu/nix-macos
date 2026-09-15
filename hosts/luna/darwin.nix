@@ -21,13 +21,12 @@ in {
       persistent-apps =
         []
         ++ lib.optionals (has "work") [
-          "/Applications/Gemini.app"
-          "/Applications/Nix Apps/Google Chrome.app"
-          "/Applications/Nix Apps/Slack.app"
-          "/Applications/Microsoft Teams.app"
+          "/Applications/Google Chrome.app"
+          "/Applications/Obsidian.app"
+          "/Applications/Slack.app"
         ]
         ++ lib.optionals (has "dev") [
-          "/Applications/Nix Apps/WezTerm.app"
+          "/Applications/Ghostty.app"
         ];
     };
     finder = {
