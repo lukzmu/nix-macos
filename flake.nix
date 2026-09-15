@@ -26,10 +26,11 @@
       username,
       userHome,
       profiles,
+      flakeRoot ? "${userHome}/Developer/projects/lukzmu/nix-macos",
     }:
       nix-darwin.lib.darwinSystem {
         specialArgs = {
-          inherit inputs hostName system username userHome profiles;
+          inherit inputs hostName system username userHome profiles flakeRoot;
         };
         modules = [
           ./modules/darwin/core.nix
@@ -46,7 +47,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = {
-              inherit inputs hostName system username userHome profiles;
+              inherit inputs hostName system username userHome profiles flakeRoot;
             };
             home-manager.users.${username} = import ./home.nix;
           })
