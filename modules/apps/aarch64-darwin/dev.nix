@@ -5,6 +5,7 @@
       "docker-compose"
       "git"
       "lazygit"
+      "lazysql"
       "mise"
       "node"
       "parqeye"
@@ -12,6 +13,7 @@
       "ripgrep"
     ];
     casks = [
+      "dbeaver-community"
       "ghostty"
     ];
   };

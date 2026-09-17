@@ -1,6 +1,9 @@
 {...}: {
   homebrew = {
     enable = true;
+    brews = [
+      "mysql"
+    ];
     casks = [
       "bitwarden"
       "gcloud-cli"
