@@ -67,7 +67,7 @@
         system = "aarch64-darwin";
         username = "lukasz.zmudzinski@stxnext.pl";
         userHome = "/Users/lukasz.zmudzinski@stxnext.pl";
-        profiles = ["base" "dev" "work"];
+        profiles = ["base" "dev" "work" "ai"];
       };
     };
     darwinPackages = {
