@@ -30,16 +30,19 @@ in {
       show-recents = false;
       tilesize = 32;
       persistent-apps = [
-        "/Applications/Safari.app"
+        "/System/Applications/Home.app"
+        "/Applications/Brave Browser.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/Mail.app"
         "/System/Applications/Notes.app"
+        "/Applications/Obsidian.app"
         "/System/Applications/Messages.app"
-        "/Applications/Ghostty.app"
+        "/Applications/Signal.app"
         "/Applications/Discord.app"
+        "/Applications/Xcode.app"
+        "/Applications/Ghostty.app"
         "/Applications/Battle.net.app"
         "/Applications/CurseForge.app"
-        "/System/Applications/Home.app"
         "/System/Applications/Music.app"
         "/System/Applications/Podcasts.app"
         "/System/Applications/Photos.app"
