@@ -16,5 +16,8 @@
       "dbeaver-community"
       "ghostty"
     ];
+    masApps = {
+      "Xcode" = 497799835;
+    };
   };
 }

@@ -7,6 +7,7 @@
       "htop"
       "m-cli"
       "mas"
+      "mole"
       "onefetch"
       "starship"
       "tree"

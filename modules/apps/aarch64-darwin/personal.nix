@@ -1,6 +1,11 @@
 {...}: {
   homebrew = {
     enable = true;
+    casks = [
+      "brave-browser"
+      "obsidian"
+      "signal"
+    ];
     masApps = {
       "Amphetamine" = 937984704;
       "Brother iPrint&Scan" = 1193539993;
