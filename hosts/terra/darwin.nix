@@ -38,6 +38,7 @@ in {
         "/Applications/Obsidian.app"
         "/System/Applications/Messages.app"
         "/Applications/Signal.app"
+        "/Applications/Slack.app"
         "/Applications/Discord.app"
         "/Applications/Xcode.app"
         "/Applications/Ghostty.app"

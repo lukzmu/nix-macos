@@ -15,6 +15,7 @@
     casks = [
       "dbeaver-community"
       "ghostty"
+      "slack"
     ];
     masApps = {
       "Xcode" = 497799835;
