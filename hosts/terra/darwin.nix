@@ -40,7 +40,6 @@ in {
         "/Applications/Signal.app"
         "/Applications/Slack.app"
         "/Applications/Discord.app"
-        "/Applications/Xcode.app"
         "/Applications/Ghostty.app"
         "/Applications/Battle.net.app"
         "/Applications/CurseForge.app"

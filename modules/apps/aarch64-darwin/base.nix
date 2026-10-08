@@ -14,6 +14,8 @@
       "zsh"
     ];
     casks = [
+      "brave-browser"
+      "obsidian"
       "rectangle"
     ];
   };

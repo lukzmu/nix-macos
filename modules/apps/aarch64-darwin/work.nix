@@ -6,9 +6,8 @@
     ];
     casks = [
       "bitwarden"
-      "gcloud-cli"
-      "google-chrome"
-      "obsidian"
+      "slack"
+      "tailscale"
     ];
     masApps = {
       "Amphetamine" = 937984704;

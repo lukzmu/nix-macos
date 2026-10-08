@@ -4,6 +4,7 @@
     brews = [
       "docker-compose"
       "git"
+      "k9s"
       "lazygit"
       "lazysql"
       "mise"
@@ -15,10 +16,6 @@
     casks = [
       "dbeaver-community"
       "ghostty"
-      "slack"
     ];
-    masApps = {
-      "Xcode" = 497799835;
-    };
   };
 }
