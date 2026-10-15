@@ -36,6 +36,17 @@ return {
 			desc = "Prefer Pyright hover when Ruff and Pyright both attach",
 		})
 
+		vim.api.nvim_create_autocmd("LspAttach", {
+			group = vim.api.nvim_create_augroup("lsp_attach_keymaps", { clear = true }),
+			callback = function(args)
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = args.buf, desc = "Go to definition" })
+				vim.keymap.set("n", "gR", function()
+					require("telescope.builtin").lsp_references({ include_declaration = false })
+				end, { buffer = args.buf, desc = "Show all usages" })
+			end,
+			desc = "LSP keymaps",
+		})
+
 		require("mason-lspconfig").setup(opts)
 	end,
 }
