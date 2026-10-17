@@ -19,14 +19,11 @@ in {
       show-recents = false;
       tilesize = 32;
       persistent-apps =
-        []
-        ++ lib.optionals (has "work") [
+        [
           "/Applications/Google Chrome.app"
           "/Applications/Obsidian.app"
           "/Applications/DBeaver.app"
           "/Applications/Slack.app"
-        ]
-        ++ lib.optionals (has "dev") [
           "/Applications/Ghostty.app"
         ];
     };
