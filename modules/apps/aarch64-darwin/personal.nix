@@ -7,6 +7,7 @@
       "Numbers" = 361304891;
       "Pages" = 361309726;
       "uBlock Origin Lite" = 6745342698;
+      "Xcode" = 497799835;
     };
   };
 }

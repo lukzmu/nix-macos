@@ -2,17 +2,17 @@
   homebrew = {
     enable = true;
     brews = [
+      "lazysql"
       "mysql"
+      "parqeye"
     ];
     casks = [
       "bitwarden"
+      "dbeaver-community"
       "gcloud-cli"
       "google-chrome"
-      "obsidian"
       "slack"
+      "tailscale"
     ];
-    masApps = {
-      "Amphetamine" = 937984704;
-    };
   };
 }
