@@ -5,6 +5,7 @@
       "battle-net"
       "curseforge"
       "discord"
+      "steam"
     ];
   };
 }

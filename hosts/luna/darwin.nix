@@ -18,17 +18,13 @@ in {
       show-process-indicators = true;
       show-recents = false;
       tilesize = 32;
-      persistent-apps =
-        []
-        ++ lib.optionals (has "work") [
-          "/Applications/Google Chrome.app"
-          "/Applications/Obsidian.app"
-          "/Applications/DBeaver.app"
-          "/Applications/Slack.app"
-        ]
-        ++ lib.optionals (has "dev") [
-          "/Applications/Ghostty.app"
-        ];
+      persistent-apps = [
+        "/Applications/Google Chrome.app"
+        "/Applications/Obsidian.app"
+        "/Applications/DBeaver.app"
+        "/Applications/Slack.app"
+        "/Applications/Ghostty.app"
+      ];
     };
     finder = {
       _FXShowPosixPathInTitle = false;
