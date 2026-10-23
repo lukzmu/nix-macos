@@ -51,7 +51,7 @@
       delta.navigate = true;
 
       includeIf = {
-        "gitdir/i:~/developer/projects/c9h/".path = "~/.config/git/config-c9h";
+        "gitdir/i:~/developer/projects/tails/".path = "~/.config/git/config-tails";
         "gitdir/i:~/developer/projects/stx/".path = "~/.config/git/config-stx";
       };
     };
@@ -65,6 +65,6 @@
   xdg.configFile."git/ignore".source = ./config/ignore;
   xdg.configFile."git/attributes".source = ./config/attributes;
 
-  xdg.configFile."git/config-c9h".source = ./config/config-c9h;
+  xdg.configFile."git/config-tails".source = ./config/config-tails;
   xdg.configFile."git/config-stx".source = ./config/config-stx;
 }
