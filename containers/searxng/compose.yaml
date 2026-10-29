@@ -1,0 +1,9 @@
+services:
+  searxng:
+    image: searxng/searxng:2026.10.25-54ca1d9cf
+    container_name: searxng
+    ports:
+      - "19080:8080"
+    volumes:
+      - ./data:/etc/searxng
+    restart: unless-stopped
